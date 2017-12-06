@@ -1,6 +1,7 @@
 const ask = require('./ask');
 const chalk = require('chalk');
-main().then(() => ask.close());
+console.log();
+main().then(() => {console.log(); ask.close()});
 
 async function main() {
 
