@@ -1,10 +1,11 @@
 const ask = require('./ask');
+const chalk = require('chalk');
 main().then(() => ask.close());
 
 async function main() {
 
     console.log('hi');
-    let ans = await(ask('How did it happen? '));
-    console.log(`Answer ${ans}`);
+    let ans = await ask(chalk.yellow('How did it happen? '));
+    console.log(`Answer ${chalk.red(ans)}`);
 
 }
